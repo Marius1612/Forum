@@ -26,10 +26,7 @@ body {
 	width: 50%;
 }
 
-.message {
-    font-size: 10px;
-}
-#loginButton{
+#registerButton{
 	height: 100px;
 	width: 100px;
 	position: absolute;

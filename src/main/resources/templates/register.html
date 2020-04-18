@@ -2,15 +2,19 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
-    <link href = '../css/login.css' rel = 'stylesheet'>
-    <title> Login </title>
+    <link href = '../css/register.css' rel = 'stylesheet'>
+    <title> Register </title>
 </head>
 <body>
-<input id = "loginButton" type="image" src="../img/b1.gif" th:action="@{/DS_login}" name = "login">
+<form  th:action="@{/DS_Register}" method="post">
+<input id = "registerButton" type="image" src="../img/b1.gif" name = "register">
 <div class = "panel">
-    <form class="login-form"  th:action="@{/login}" method="post">
-    <p> Login </p>
+    <p> Register </p>
     <br>
+    <br>
+    <label> email </label>
+    <br>
+    <input type = "text" name = "emailAddress">
     <br>
     <label> username </label>
     <br>
@@ -21,10 +25,7 @@
     <input type = "password" name = "password">
     <br>
     <p id = "wrongLogin">Wrong credentials</p>
-    </form>
-
-    <p class="message">Not registered?  <a th:href = "@{/DS_Register}" href = "register.html">Register</a></p>
 </div>
-
+</form>
 </body>
 </html>
