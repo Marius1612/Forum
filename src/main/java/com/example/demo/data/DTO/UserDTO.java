@@ -7,12 +7,12 @@ import lombok.Getter;
 public class UserDTO {
     private int user_id;
     private String emailAddress;
+    private String name;
     private String password;
-    private String username;
 
     public UserDTO (User u) {
         this.user_id = u.getUser_id();
-        this.username = u.getUsername();
+        this.name = u.getName();
         this.emailAddress = u.getEmailAddress();
         this.password = u.getPassword();
     }

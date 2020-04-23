@@ -16,7 +16,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/css/**").permitAll()
                 .antMatchers("/img/**").permitAll()
                 .antMatchers("/DS_Register").permitAll()
-                .anyRequest().authenticated()
-                .and().formLogin().loginPage("/DS_login").permitAll();
+                .antMatchers("/DS_Home").permitAll()
+                .anyRequest().authenticated().and().formLogin().loginPage("/login").permitAll();
+
+        http.formLogin()
+                .loginPage("/DS_login")
+                .defaultSuccessUrl("/DS_Home")
+                .failureUrl("/DS_Register");
     }
 }

@@ -6,6 +6,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
@@ -19,14 +20,16 @@ public class User {
     private Integer user_id;
     private String emailAddress;
     private String password;
-    private String username;
+    private String name;
+
+    @OneToMany(mappedBy = "user")
+    private List<Discussion> discussions;
 
     @Builder
-    private User(Integer user_id, String emailAddress, String username,String password){
+    private User(Integer user_id, String emailAddress, String name,String password){
         this.user_id = user_id;
         this.emailAddress = emailAddress;
-        this.username = username;
+        this.name = name;
         this.password = password;
-
     }
 }

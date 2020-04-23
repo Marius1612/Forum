@@ -33,7 +33,7 @@ public class UserService implements IUserService{
     @Override
     public void insertUser(String emailAddress, String password, String username) {
         User u = User.builder().emailAddress(emailAddress)
-                .password(password).username(username).build();
+                .password(password).name(username).build();
         u = userRepository.save(u);
     }
 }

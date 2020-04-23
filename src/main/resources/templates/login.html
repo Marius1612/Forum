@@ -6,7 +6,6 @@
     <title> Login </title>
 </head>
 <body>
-<input id = "loginButton" type="image" src="../img/b1.gif" th:action="@{/DS_login}" name = "login">
 <div class = "panel">
     <form class="login-form"  th:action="@{/login}" method="post">
     <p> Login </p>
@@ -20,7 +19,7 @@
     <br>
     <input type = "password" name = "password">
     <br>
-    <p id = "wrongLogin">Wrong credentials</p>
+        <button type="submit" id = "loginButton"  name = "login" value="Login"></button>
     </form>
 
     <p class="message">Not registered?  <a th:href = "@{/DS_Register}" href = "register.html">Register</a></p>

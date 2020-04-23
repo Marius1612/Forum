@@ -2,14 +2,13 @@ package com.example.demo.services;
 
 import com.example.demo.data.DAO.User;
 import com.example.demo.data.Repository.UserRepository;
-import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 @Service("ILoginService")
-public class LoginService implements ILoginService {
+public class LoginService {
     private UserRepository userRepository;
 
     @Autowired
